@@ -25,11 +25,23 @@ d'une autre vidéo après une navigation), le titre reste « Tour de France
 
 ## Installation
 
-1. Ouvre `chrome://extensions`.
-2. Active le **Mode développeur** (en haut à droite).
-3. Clique **Charger l'extension non empaquetée**.
-4. Sélectionne ce dossier (`eurosport-tdf-extension`).
-5. Ouvre / recharge une page YouTube.
+### Le plus simple (depuis une release)
+
+1. Va sur la page [Releases](https://github.com/Acid3croco/eurosport-tdf-titles/releases)
+   et télécharge le fichier `eurosport-tdf-titles-vX.Y.Z.zip` de la dernière version.
+2. **Décompresse** le zip (tu obtiens un dossier `eurosport-tdf-titles`).
+3. Ouvre `chrome://extensions`.
+4. Active le **Mode développeur** (en haut à droite).
+5. Clique **Charger l'extension non empaquetée** et sélectionne le dossier décompressé.
+6. Ouvre / recharge une page YouTube.
+
+> Chrome exige le Mode développeur pour les extensions hors Chrome Web Store.
+> Ne supprime pas le dossier décompressé : Chrome le lit à chaque démarrage.
+
+### Depuis le code source (pour bidouiller)
+
+1. Clone le dépôt : `git clone https://github.com/Acid3croco/eurosport-tdf-titles.git`
+2. Suis les étapes 3 à 6 ci-dessus en sélectionnant le dossier cloné.
 
 ## Personnalisation
 

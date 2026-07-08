@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Eurosport - Titre Tour de France",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sur les vidéos YouTube de la chaîne Eurosport France, remplace le titre par « Tour de France <année> ».",
   "content_scripts": [
     {

@@ -16,6 +16,9 @@
   // Nom(s) de chaîne acceptés (comparaison insensible à la casse et aux espaces).
   const CHANNEL_NAMES = ["eurosport france", "eurosport"];
 
+  // Handles acceptés (partie après @ dans /@handle), en minuscules.
+  const CHANNEL_HANDLES = ["eurosportfrance"];
+
   // Détecte « Tour de France 2025 » (ou toute autre année sur 4 chiffres).
   const TDF_REGEX = /Tour de France\s+(\d{4})/i;
 
@@ -43,6 +46,7 @@
   const TITLE_IN_CARD = [
     "#video-title",
     "a#video-title-link",
+    "a.ytLockupMetadataViewModelTitle",
     ".yt-lockup-metadata-view-model-wiz__title",
     "h3 a",
   ].join(",");
@@ -117,14 +121,33 @@
     }
   }
 
+  function handleFromHref(href) {
+    const m = /\/@([^/?#]+)/.exec(href || "");
+    return m ? m[1].toLowerCase() : null;
+  }
+
   function ownerIsEurosport() {
     const el = document.querySelector(MAIN_OWNER_SEL);
-    return !!el && CHANNEL_NAMES.includes(normalize(el.textContent));
+    if (!el) return false;
+    if (CHANNEL_NAMES.includes(normalize(el.textContent))) return true;
+    const h = handleFromHref(el.getAttribute("href"));
+    return !!h && CHANNEL_HANDLES.includes(h);
   }
 
   function cardIsEurosport(card) {
+    // 1) Nom de chaîne affiché en toutes lettres.
     for (const el of card.querySelectorAll(CHANNEL_IN_CARD)) {
       if (CHANNEL_NAMES.includes(normalize(el.textContent))) return true;
+    }
+    // 2) Handle dans un lien /@EurosportFrance (le plus fiable).
+    for (const a of card.querySelectorAll('a[href*="/@"]')) {
+      const h = handleFromHref(a.getAttribute("href"));
+      if (h && CHANNEL_HANDLES.includes(h)) return true;
+    }
+    // 3) aria-label du type « Accéder à la chaîne Eurosport France ».
+    for (const el of card.querySelectorAll("[aria-label]")) {
+      const al = normalize(el.getAttribute("aria-label"));
+      if (CHANNEL_NAMES.some((n) => al.endsWith(n))) return true;
     }
     return false;
   }

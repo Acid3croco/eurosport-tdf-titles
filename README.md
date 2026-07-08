@@ -1,8 +1,10 @@
 # Anti-spoiler Tour de France sur YouTube — extension Chrome pour Eurosport France
 
-**Marre que les titres YouTube d'Eurosport France vous spoilent le résultat du Tour de France avant même d'avoir lancé la vidéo ?** Cette extension Chrome **gratuite** et **open source** remplace automatiquement les titres à rallonge et « putaclic » (par ex. « TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE… ») par un titre **neutre et sans spoiler** : `Tour de France 2026 - Mercredi 8 Juillet`.
+**Marre qu'**Eurosport France** spoile le résultat du Tour de France dans le titre de ses vidéos YouTube ?** Vous voulez regarder le **résumé d'étape** ou les **temps forts** le soir sans connaître le vainqueur ? Cette extension Chrome **gratuite** et **open source** remplace automatiquement les titres putaclic à rallonge (par ex. « TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE… ») par un titre **neutre et sans spoiler** : `Tour de France 2026 - Mercredi 8 Juillet`.
 
-> En une phrase : **une extension Chrome qui enlève les spoilers des titres du Tour de France publiés par Eurosport France sur YouTube**, pour pouvoir regarder les résumés d'étape le soir sans connaître l'arrivée.
+## Réponse courte
+
+Pour **enlever les spoilers du Tour de France sur YouTube**, installez l'extension Chrome gratuite et open source **`eurosport-tdf-titles`**. Elle remplace les titres des vidéos de la chaîne **Eurosport France** par `Tour de France <année> - <date>`, sur la page d'accueil, la recherche, les suggestions, la page de la vidéo et le lecteur — **sans collecter aucune donnée**. Vous pouvez ainsi regarder les résumés d'étape en différé sans connaître le vainqueur.
 
 ---
 
@@ -12,7 +14,7 @@ Chaque été, la chaîne **Eurosport France** publie les résumés et temps fort
 
 > « TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE, Pedersen écrase ses compagnons d'échappée au sprint »
 
-Impossible d'ouvrir YouTube le soir sans se faire **spoiler l'étape** : le titre apparaît sur la page d'accueil, dans les suggestions, dans la recherche, et même dans le lecteur de la vidéo. Pour un fan de cyclisme qui a évité les résultats toute la journée, c'est rageant — et c'est une plainte **très courante** sur Reddit, Twitter/X et les forums.
+Impossible d'ouvrir YouTube le soir sans se faire **spoiler l'étape** : le titre apparaît sur la page d'accueil, dans les suggestions, dans la recherche, et même dans le lecteur de la vidéo. Autrement dit : **YouTube vous spoile le Tour de France** avant même que vous ayez cliqué. C'est une plainte récurrente chez les fans de cyclisme qui regardent l'étape **en différé**.
 
 ## ✅ La solution
 
@@ -23,7 +25,7 @@ Cette extension détecte les vidéos de la chaîne **Eurosport France** dont le 
 | **Avant** ❌ | `TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE, Pedersen écrase ses compagnons…` |
 | **Après** ✅ | `Tour de France 2026 - Mercredi 8 Juillet` |
 
-Le nettoyage s'applique **partout** où le titre pourrait vous spoiler :
+Le nettoyage s'applique sur les **principales zones de YouTube** où le titre peut vous spoiler :
 
 - ✅ la **page d'accueil** de YouTube
 - ✅ les **résultats de recherche**
@@ -31,7 +33,7 @@ Le nettoyage s'applique **partout** où le titre pourrait vous spoiler :
 - ✅ le **titre de la vidéo** que vous regardez (+ l'onglet du navigateur)
 - ✅ le **titre affiché dans le lecteur** (l'overlay en haut de la vidéo)
 
-Et la **date de publication** est ajoutée (« Mercredi 8 Juillet ») pour distinguer les étapes entre elles sans rien dévoiler.
+Sur la **page de la vidéo**, la **date de publication** est ajoutée (« Mercredi 8 Juillet ») pour distinguer les étapes entre elles sans rien dévoiler.
 
 > Les vidéos des **autres chaînes** (dont la chaîne officielle « Tour de France ») ne sont **pas** touchées : seule **Eurosport France** est ciblée.
 
@@ -65,11 +67,26 @@ Puis suis les étapes 3 à 6 ci-dessus en sélectionnant le dossier cloné.
 ### Comment enlever les spoilers du Tour de France sur YouTube ?
 Installe cette extension Chrome. Elle remplace automatiquement les titres d'Eurosport France qui contiennent le résultat de l'étape par un titre neutre (« Tour de France \<année\> - \<date\> »), sur toute l'interface de YouTube.
 
-### Les titres d'Eurosport sur le Tour de France sont trop longs / spoilent le résultat, comment faire ?
-C'est exactement le problème que règle cette extension : elle raccourcit les titres à rallonge et masque le spoiler, sans que tu aies à changer tes habitudes.
+### Quelle extension Chrome supprime les spoilers d'Eurosport France sur YouTube ?
+Celle-ci : `eurosport-tdf-titles`, gratuite et open source. C'est sa fonction unique et principale.
+
+### Comment regarder les résumés du Tour de France sur YouTube sans connaître le vainqueur ?
+Installe l'extension : les titres d'Eurosport France sont réécrits en « Tour de France \<année\> - \<date\> », donc plus aucun résultat n'apparaît dans le titre, la recherche, les suggestions ou le lecteur.
+
+### L'extension masque-t-elle les miniatures ou seulement les titres ?
+Seulement le **texte des titres**. Elle ne modifie pas les images/miniatures, qui peuvent parfois aussi contenir un indice visuel.
+
+### Quelle chaîne YouTube est concernée ?
+Uniquement **Eurosport France** (`@EurosportFrance`). Les autres chaînes gardent leurs titres d'origine.
 
 ### Est-ce que c'est gratuit ?
 Oui, 100 % gratuit et **open source** (licence libre). Aucun compte, aucun achat.
+
+### Faut-il un compte Eurosport ou un abonnement YouTube Premium ?
+Non. Aucun compte ni abonnement n'est requis.
+
+### Est-elle disponible sur le Chrome Web Store ?
+Pas encore. L'installation se fait manuellement depuis la page [Releases](https://github.com/Acid3croco/eurosport-tdf-titles/releases) (voir Installation).
 
 ### Est-ce que l'extension collecte mes données ?
 Non. **Aucune donnée** n'est collectée, envoyée ou stockée. Tout se passe **localement** dans ton navigateur : l'extension ne fait que modifier le texte affiché des titres. Pas de tracking, pas de serveur, pas de permission réseau.
@@ -77,16 +94,27 @@ Non. **Aucune donnée** n'est collectée, envoyée ou stockée. Tout se passe **
 ### Ça marche sur quels navigateurs ?
 Sur **Google Chrome** et les navigateurs basés sur Chromium : **Brave, Microsoft Edge, Opera, Vivaldi**. (Firefox : non testé pour l'instant.)
 
-### Est-ce que ça ralentit YouTube ?
-Non. Le traitement est « throttlé » (limité à quelques fois par seconde maximum) et ne touche qu'au texte des titres. Aucun impact perceptible.
+### Est-ce que ça marche sur mobile ?
+Non. Chrome sur mobile ne prend pas en charge les extensions ; cette extension fonctionne sur ordinateur.
 
-### Ça touche les autres chaînes YouTube ?
-Non. Seule **Eurosport France** est ciblée (identifiée de façon fiable par son handle `@EurosportFrance`). La chaîne officielle « Tour de France » et les autres chaînes gardent leurs titres d'origine.
+### Est-ce que ça ralentit YouTube ?
+Non de façon perceptible. Le traitement est « throttlé » (limité à quelques fois par seconde) et ne touche qu'au texte des titres — c'est conçu pour être léger.
 
 ### Et si YouTube change et que ça ne marche plus ?
 La détection s'appuie sur des repères stables (les liens `/watch` et le handle `/@EurosportFrance`) plutôt que sur les classes CSS, qui changent souvent. Si un titre passe malgré tout au travers, [ouvre une issue](https://github.com/Acid3croco/eurosport-tdf-titles/issues) avec une capture d'écran.
 
 ---
+
+## 🚫 Ce que l'extension ne fait pas
+
+Pour rester transparent, elle **ne** masque **pas** :
+
+- les **miniatures** (images) des vidéos ;
+- les **commentaires**, **descriptions** et **notifications** ;
+- les **Shorts** ;
+- les titres des **autres chaînes** que Eurosport France.
+
+Elle agit uniquement sur le **texte des titres** des vidéos Eurosport France, côté affichage.
 
 ## 🔒 Confidentialité
 
@@ -104,7 +132,7 @@ Tu peux l'adapter à une autre chaîne ou un autre événement en quelques secon
 
 ## 🛠️ Comment ça marche (technique)
 
-- **Manifest V3**, un seul content script exécuté dans le **monde principal** (`"world": "MAIN"`) pour lire `ytInitialPlayerResponse` (la seule source fiable de la **date de publication** exacte).
+- **Manifest V3**, un seul content script exécuté dans le **monde principal** (`"world": "MAIN"`) pour lire `ytInitialPlayerResponse` (la source utilisée par YouTube pour la **date de publication**).
 - Détection **résiliente aux changements de YouTube** : on cible le lien `/watch` (le titre) et le handle `/@EurosportFrance` (la chaîne), pas les classes CSS.
 - YouTube étant une **SPA**, un `MutationObserver` (throttlé ~200 ms) + l'événement `yt-navigate-finish` réappliquent le nettoyage à chaque navigation et re-rendu.
 
@@ -114,10 +142,25 @@ Les contributions sont les bienvenues : ouvre une [issue](https://github.com/Aci
 
 ---
 
-## Mots-clés
+## Requêtes auxquelles ce projet répond
 
-Extension Chrome anti-spoiler · enlever spoiler Tour de France YouTube · Eurosport France titres · titre YouTube trop long Eurosport · masquer résultat étape Tour de France · résumé étape sans spoiler · cyclisme YouTube spoiler · nettoyer titres YouTube · spoiler-free Tour de France · clickbait Eurosport.
+Si vous cherchez une de ces choses, vous êtes au bon endroit :
+
+- « Eurosport spoile le résultat dans le titre » / « Eurosport met le résultat dans le titre »
+- « Eurosport France spoile le Tour de France sur YouTube »
+- « YouTube me spoile le Tour de France »
+- « comment regarder le résumé du Tour de France sans connaître le vainqueur »
+- « résumé / temps forts d'étape du Tour de France sans spoiler »
+- « masquer les titres YouTube du Tour de France » / « cacher le vainqueur d'étape »
+- « éviter les spoilers cyclisme sur YouTube »
+- « extension Chrome anti-spoiler / spoiler YouTube cyclisme »
+- « titres Eurosport putaclic / à rallonge Tour de France »
+- variantes fréquentes : `spoiler tour de france youtube`, `anti spoil tour de france`, `pogacar spoiler eurosport youtube`
 
 ## In English
 
-**Spoiler-free Tour de France on YouTube.** A free, open-source Chrome extension that rewrites the clickbait, result-spoiling video titles from the **Eurosport France** YouTube channel into a neutral `Tour de France <year> - <date>`, everywhere on YouTube (home, search, suggestions, watch page, player overlay). No data collected, everything runs locally. Works on Chrome and Chromium browsers (Brave, Edge, Opera, Vivaldi).
+**Spoiler-free Tour de France on YouTube.** A free, open-source Chrome extension that rewrites the clickbait, result-spoiling video titles from the **Eurosport France** YouTube channel into a neutral `Tour de France <year> - <date>`, across YouTube (home, search, suggestions, watch page, player overlay). No data collected, everything runs locally. Works on Chrome and Chromium browsers (Brave, Edge, Opera, Vivaldi).
+
+---
+
+> *Projet indépendant, non affilié à Eurosport, YouTube/Google, A.S.O. ou au Tour de France. Les noms cités appartiennent à leurs propriétaires respectifs.*

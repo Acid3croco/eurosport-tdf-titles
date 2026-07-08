@@ -23,6 +23,11 @@ date de publication exacte. Si la date n'est pas disponible (données absentes o
 d'une autre vidéo après une navigation), le titre reste « Tour de France
 \<année\> » sans date : le comportement de base n'est jamais cassé.
 
+Pour résister aux changements fréquents du HTML de YouTube, la détection ne
+s'appuie **pas** sur les classes CSS (qui changent souvent) mais sur des
+invariants stables : le titre d'une carte est le lien vers `/watch`, et la
+chaîne est identifiée par son **handle** `/@EurosportFrance`.
+
 ## Installation
 
 ### Le plus simple (depuis une release)
@@ -47,7 +52,8 @@ d'une autre vidéo après une navigation), le titre reste « Tour de France
 
 Dans `content.js` :
 
-- `CHANNEL_NAMES` — les noms de chaîne ciblés (par défaut `eurosport france`, `eurosport`).
+- `CHANNEL_HANDLES` — les handles ciblés (par défaut `eurosportfrance`) — signal principal.
+- `CHANNEL_NAMES` — les noms de chaîne acceptés en secours (par défaut `eurosport france`).
 - `TDF_REGEX` — le motif détecté (`/Tour de France\s+(\d{4})/i`).
 
 ## Fichiers

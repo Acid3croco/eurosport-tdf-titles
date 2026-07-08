@@ -9,6 +9,8 @@ simplement **« Tour de France \<année\> »**.
 - au **titre principal** de la vidéo en cours (`/watch`) — et à l'onglet — suivi
   de la **date de publication** au format « Jeudi 12 Juillet » lorsqu'elle est
   disponible ;
+- au **titre affiché dans le lecteur** (l'overlay `.ytp-title-link` en haut de la
+  vidéo), avec le même format que le titre principal ;
 - aux **vignettes** : suggestions latérales, page d'accueil, résultats de
   recherche (année seule, sans date : une vignette n'expose pas de date exacte).
 

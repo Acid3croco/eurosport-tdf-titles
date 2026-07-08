@@ -147,17 +147,23 @@
   }
 
   function cleanAll() {
-    // 1. Titre principal de la vidéo en cours (+ date de publication si dispo).
+    // 1. Titre principal de la vidéo en cours (+ date de publication si dispo),
+    //    et le titre affiché dans l'overlay du lecteur (.ytp-title-link).
     if (location.pathname === "/watch" && ownerIsEurosport()) {
       const mainTitle = document.querySelector(MAIN_TITLE_SEL);
-      if (mainTitle) {
-        const base = cleanedTitleFor(mainTitle.textContent);
-        if (base) {
-          const date = formatFrenchDate(publishDateIso());
-          const newTitle = date ? `${base} - ${date}` : base;
-          setCleanTitle(mainTitle, newTitle);
-          document.title = `${newTitle} - YouTube`;
-        }
+      const playerTitle = document.querySelector("#movie_player .ytp-title-link");
+      // La base « Tour de France <année> » peut venir de l'un ou l'autre titre
+      // (le <h1> a pu être déjà nettoyé, le titre du lecteur reste complet).
+      const source =
+        (mainTitle && cleanedTitleFor(mainTitle.textContent) && mainTitle.textContent) ||
+        (playerTitle && playerTitle.textContent);
+      const base = cleanedTitleFor(source);
+      if (base) {
+        const date = formatFrenchDate(publishDateIso());
+        const newTitle = date ? `${base} - ${date}` : base;
+        if (mainTitle) setCleanTitle(mainTitle, newTitle);
+        if (playerTitle) setCleanTitle(playerTitle, newTitle);
+        document.title = `${newTitle} - YouTube`;
       }
     }
 

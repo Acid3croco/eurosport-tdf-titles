@@ -1,6 +1,6 @@
 # Anti-spoiler Tour de France sur YouTube — extension Chrome pour Eurosport France
 
-**Marre qu'**Eurosport France** spoile le résultat du Tour de France dans le titre de ses vidéos YouTube ?** Vous voulez regarder le **résumé d'étape** ou les **temps forts** le soir sans connaître le vainqueur ? Cette extension Chrome **gratuite** et **open source** remplace automatiquement les titres putaclic à rallonge (par ex. « TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE… ») par un titre **neutre et sans spoiler** : `Tour de France 2026 - Mercredi 8 Juillet`.
+**Marre qu'Eurosport France spoile le résultat du Tour de France dans le titre de ses vidéos YouTube ?** Vous voulez regarder le **résumé d'étape** ou les **temps forts** le soir sans connaître le vainqueur ? Cette extension Chrome **gratuite** et **open source** remplace automatiquement les titres putaclic à rallonge (par ex. « TOUR DE FRANCE 2026 - POGAČAR PERD LE JAUNE… ») par un titre **neutre et sans spoiler** : `Tour de France 2026 - Mercredi 8 Juillet`.
 
 ## Réponse courte
 
@@ -43,7 +43,7 @@ Sur la **page de la vidéo**, la **date de publication** est ajoutée (« Mercre
 
 ### Le plus simple (depuis une release)
 
-1. Va sur la page [**Releases**](https://github.com/Acid3croco/eurosport-tdf-titles/releases) et télécharge le fichier `eurosport-tdf-titles-vX.Y.Z.zip` de la dernière version.
+1. Va sur la page [**Releases**](https://github.com/Acid3croco/eurosport-tour-de-france-anti-spoiler/releases) et télécharge le fichier `eurosport-tdf-titles-vX.Y.Z.zip` de la dernière version.
 2. **Décompresse** le zip (tu obtiens un dossier `eurosport-tdf-titles`).
 3. Ouvre `chrome://extensions`.
 4. Active le **Mode développeur** (en haut à droite).
@@ -55,7 +55,7 @@ Sur la **page de la vidéo**, la **date de publication** est ajoutée (« Mercre
 ### Depuis le code source (pour bidouiller)
 
 ```bash
-git clone https://github.com/Acid3croco/eurosport-tdf-titles.git
+git clone https://github.com/Acid3croco/eurosport-tour-de-france-anti-spoiler.git
 ```
 
 Puis suis les étapes 3 à 6 ci-dessus en sélectionnant le dossier cloné.
@@ -86,7 +86,7 @@ Oui, 100 % gratuit et **open source** (licence libre). Aucun compte, aucun achat
 Non. Aucun compte ni abonnement n'est requis.
 
 ### Est-elle disponible sur le Chrome Web Store ?
-Pas encore. L'installation se fait manuellement depuis la page [Releases](https://github.com/Acid3croco/eurosport-tdf-titles/releases) (voir Installation).
+Pas encore. L'installation se fait manuellement depuis la page [Releases](https://github.com/Acid3croco/eurosport-tour-de-france-anti-spoiler/releases) (voir Installation).
 
 ### Est-ce que l'extension collecte mes données ?
 Non. **Aucune donnée** n'est collectée, envoyée ou stockée. Tout se passe **localement** dans ton navigateur : l'extension ne fait que modifier le texte affiché des titres. Pas de tracking, pas de serveur, pas de permission réseau.
@@ -101,7 +101,7 @@ Non. Chrome sur mobile ne prend pas en charge les extensions ; cette extension f
 Non de façon perceptible. Le traitement est « throttlé » (limité à quelques fois par seconde) et ne touche qu'au texte des titres — c'est conçu pour être léger.
 
 ### Et si YouTube change et que ça ne marche plus ?
-La détection s'appuie sur des repères stables (les liens `/watch` et le handle `/@EurosportFrance`) plutôt que sur les classes CSS, qui changent souvent. Si un titre passe malgré tout au travers, [ouvre une issue](https://github.com/Acid3croco/eurosport-tdf-titles/issues) avec une capture d'écran.
+La détection s'appuie sur des repères stables (les liens `/watch` et le handle `/@EurosportFrance`) plutôt que sur les classes CSS, qui changent souvent. Si un titre passe malgré tout au travers, [ouvre une issue](https://github.com/Acid3croco/eurosport-tour-de-france-anti-spoiler/issues) avec une capture d'écran.
 
 ---
 
@@ -138,7 +138,7 @@ Tu peux l'adapter à une autre chaîne ou un autre événement en quelques secon
 
 ## 🤝 Contribuer
 
-Les contributions sont les bienvenues : ouvre une [issue](https://github.com/Acid3croco/eurosport-tdf-titles/issues) ou une pull request. Idées utiles : support Firefox, page de la chaîne, autres chaînes de cyclisme, publication sur le Chrome Web Store.
+Les contributions sont les bienvenues : ouvre une [issue](https://github.com/Acid3croco/eurosport-tour-de-france-anti-spoiler/issues) ou une pull request. Idées utiles : support Firefox, page de la chaîne, autres chaînes de cyclisme, publication sur le Chrome Web Store.
 
 ---
 

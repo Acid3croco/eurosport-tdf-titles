@@ -127,6 +127,17 @@
     return !!h && CHANNEL_HANDLES.includes(h);
   }
 
+  // Sommes-nous sur un onglet qui liste les vidéos de la chaîne Eurosport
+  // France elle-même (videos, shorts ou streams) ? Sur ces pages, les
+  // vignettes ne répètent NI le nom NI le handle de la chaîne : c'est le
+  // contexte de la page qui identifie l'auteur. Il faut donc considérer toutes
+  // les cartes comme lui appartenant. Ne pas étendre ce raccourci aux autres
+  // onglets, qui peuvent contenir des vidéos intégrées ou issues de playlists.
+  function onEurosportChannelPage() {
+    const m = /^\/@([^/]+)\/(?:videos|shorts|streams)\/?$/i.exec(location.pathname);
+    return !!m && CHANNEL_HANDLES.includes(m[1].toLowerCase());
+  }
+
   function cardIsEurosport(card) {
     // 1) Handle dans un lien /@EurosportFrance : le signal le plus stable
     //    (YouTube change les classes CSS, pas le format des liens).
@@ -169,9 +180,12 @@
 
     // 2. Vignettes / cartes vidéo (année seule, sans date). On repère le
     //    titre par son lien vers /watch, indépendamment des classes CSS.
+    //    Sur une page de la chaîne Eurosport, toutes les cartes lui
+    //    appartiennent (la carte ne répète pas le nom/handle de la chaîne).
+    const channelPage = onEurosportChannelPage();
     for (const card of document.querySelectorAll(CARD_SEL)) {
       if (!TDF_REGEX.test(card.textContent)) continue; // pré-filtre rapide
-      if (!cardIsEurosport(card)) continue; // pas la chaîne Eurosport France
+      if (!channelPage && !cardIsEurosport(card)) continue; // pas Eurosport France
       for (const link of card.querySelectorAll('a[href*="/watch"]')) {
         const cleaned = cleanedTitleFor(link.textContent);
         if (cleaned) setCleanTitle(link, cleaned);
